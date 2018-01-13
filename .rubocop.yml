@@ -1,0 +1,49 @@
+Rails:
+  Enabled: true
+AllCops:
+  TargetRubyVersion: 2.4
+  TargetRailsVersion: 5.1
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+    - 'bin/bundle'
+Metrics/LineLength:
+  Max: 120
+Metrics/ClassLength:
+  Max: 200
+Documentation:
+  Enabled: false
+Style/SignalException:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/MixinUsage:
+  Exclude:
+    - 'bin/setup'
+    - 'bin/update'
+Metrics/ModuleLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - 'spec/factories/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/tasks/**/*'
+    - 'config/**/*'
+    - '**/concerns/*'
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*'
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'spec/**/*'
+    - 'db/**/*'
+Security/Eval:
+  Exclude:
+    - 'spec/**/*'

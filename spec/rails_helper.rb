@@ -9,8 +9,6 @@ Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 ActiveRecord::Migration[5.1].maintain_test_schema!
 
 RSpec.configure do |config|
-  config.include Capybara::DSL
-
   # Allows to use t('some.locale.key') instead of always having to type I18n.t
   config.include AbstractController::Translation
 

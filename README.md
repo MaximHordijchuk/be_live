@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Used technologies:
+Ruby 2.4.2 + Rails 5.4 + React 16.2.0
 
-Things you may want to cover:
+### Run:
+```bash
+$ bin/setup
+$ bin/rake assets:precompile
+$ bin/webpack
+$ bin/rails restart
+``` 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Run tests
+```bash
+$ rspec
+```

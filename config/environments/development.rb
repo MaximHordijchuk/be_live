@@ -1,5 +1,5 @@
 Rails.application.configure do
-    # Verifies that versions and hashed value of the package contents in the project's package.json
+  # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = true
 
   # Settings specified here will take precedence over those in config/application.rb.
@@ -16,7 +16,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Enable/disable caching. By default caching is disabled.
-  if Rails.root.join('tmp/caching-dev.txt').exist?
+  if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
     config.cache_store = :memory_store
@@ -54,4 +54,6 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.x.webpacker[:dev_server_host] = "#{ENV['DEV_WEBPACK_DOMAIN']}:#{ENV['DEV_WEBPACK_PORT']}"
 end
